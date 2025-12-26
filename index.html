@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный квиз: Знатоки рок-исполнителей</title>
+    <link rel="stylesheet" href="style.css">
+    <link class="favicon" rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="./images/logo.jpg" alt="logo">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Квиз: Знатоки рок-исполнителей</h1>
+                        <p class="subtitle">Проверь свои знания о знаменитых рок-группах</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="quiz-container">
+            <div id="start-screen" class="screen active">
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h2>Готовы к испытанию?</h2>
+                    <p>В этом квизе 15 вопросов о легендарных рок-группах. Вам предстоит угадывать группы по описанию, песням, альбомам и интересным фактам.</p>
+                    
+                    <div class="rules">
+                        <h3><i class="fas fa-info-circle"></i> Правила:</h3>
+                        <ul>
+                            <li>15 вопросов с несколькими вариантами ответов</li>
+                            <li>За каждый правильный ответ вы получаете 1 балл</li>
+                            <li>После ответа вы увидите правильный вариант и объяснение</li>
+                            <li>В конце квиза вы узнаете свой результат и уровень знаний</li>
+                        </ul>
+                    </div>
+                    
+                    <button id="start-btn" class="btn-primary">
+                        <i class="fas fa-play"></i> Начать квиз
+                    </button>
+                </div>
+            </div>
+
+            <div id="question-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <div class="stats">
+                        <span class="stat"><i class="fas fa-question-circle"></i> Вопрос <span id="current-question">1</span>/15</span>
+                        <span class="stat"><i class="fas fa-star"></i> Баллы: <span id="score">0</span></span>
+                    </div>
+                </div>
+                
+                <div class="question-container">
+                    <h2 id="question-text">Текст вопроса</h2>
+                    <div class="options-container" id="options-container">
+                    </div>
+                </div>
+                
+                <div class="navigation">
+                    <button id="next-btn" class="btn-primary" disabled>
+                        Следующий вопрос <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="result-screen" class="screen">
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h2>Квиз завершен!</h2>
+                    
+                    <div class="result-stats">
+                        <div class="stat-box">
+                            <div class="stat-value" id="final-score">0</div>
+                            <div class="stat-label">Правильных ответов</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="percentage">0%</div>
+                            <div class="stat-label">Процент успеха</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="level">Новичок</div>
+                            <div class="stat-label">Уровень знаний</div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-message" id="result-message">
+                    </div>
+                    
+                    <div class="answers-summary" id="answers-summary">
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="restart-btn" class="btn-primary">
+                            <i class="fas fa-redo"></i> Пройти ещё раз
+                        </button>
+                        <button id="share-btn" class="btn-secondary">
+                            <i class="fas fa-share-alt"></i> Поделиться результатом
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Музыкальный квиз © 2025 | Все музыкальные группы являются зарегистрированными товарными знаками</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
